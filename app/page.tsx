@@ -12,29 +12,60 @@ import { BackgroundGlow } from "@/components/ui/BackgroundGlow";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { MouseGlow } from "@/components/ui/MouseGlow";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { FadeSection } from "@/components/ui/FadeSection";
+import { Preloader } from "@/components/ui/Preloader";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#020403] text-white">
+      <Preloader />
+
       <ScrollProgress />
       <BackgroundGlow />
       <MouseGlow />
 
       <div className="relative z-10">
         <Navbar />
-        <Hero />
+
+        <FadeSection>
+          <Hero />
+        </FadeSection>
+
         <SectionDivider />
-        <FeaturedProjects />
+
+        <FadeSection>
+          <FeaturedProjects />
+        </FadeSection>
+
         <SectionDivider />
-        <Skills />
+
+        <FadeSection>
+          <Skills />
+        </FadeSection>
+
         <SectionDivider />
-        <About />
+
+        <FadeSection>
+          <About />
+        </FadeSection>
+
         <SectionDivider />
-        <Writing />
+
+        <FadeSection>
+          <Writing />
+        </FadeSection>
+
         <SectionDivider />
-        <CurrentlyBuilding />
+
+        <FadeSection>
+          <CurrentlyBuilding />
+        </FadeSection>
+
         <SectionDivider />
-        <Contact />
+
+        <FadeSection>
+          <Contact />
+        </FadeSection>
       </div>
     </main>
   );
